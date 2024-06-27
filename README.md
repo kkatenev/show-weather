@@ -2,10 +2,11 @@
 
 ## Использование
 
-Установите libssl-dev с помощью команды:
+Установите libssl-dev и cmake с помощью команд:
 ```sh
 $ sudo apt-get install curl
 $ sudo apt-get install libssl-dev libcurl4-openssl-dev
+$ sudo apt install cmake
 ```
 
 Создайте исполняемый файл
@@ -27,6 +28,13 @@ Weather in Tokyo: "Partly cloudy", 26.2°C
 $ ./show-weather Tokyo Luxembourg
 Weather in Tokyo: "Partly cloudy", 26.2°C
 Weather in Luxembourg: "Partly cloudy", 26.0°C
+```
+
+Вариант запуска #3 (запускаем из любого места; PATH прописываем из build/)
+```sh
+$ export PATH=$PATH:$(pwd)
+$ show-weather Tokyo
+Weather in Tokyo: "Partly cloudy", 26.2°C
 ```
 
 Дистрибутив
